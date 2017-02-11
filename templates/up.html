@@ -1,0 +1,34 @@
+  {%if user.name =='amr' %}
+  <form method="post">
+
+      <label>
+        <div>tournments</div>
+        <select name = "tour">
+        {%for t in tours%}
+                <option value="{{t.subject}}">{{t.subject}}</option>
+        {%endfor%}
+
+        </select>
+        </label>
+          <label>
+        <div>numbers</div>
+        <select name = "name">
+        {%for m in members%}
+                <option value="{{m.name}}">{{m.name}}</option>
+        {%endfor%}
+        
+        </select>
+        </label>
+        <label>
+        <div>rounds</div>
+        <select name = "round">
+        {%for i in range(0,5)%}
+                <option value={{i}}>{{i}}</option>
+        {%endfor%}
+        
+        </select>
+        </label>
+
+      <input type="submit">
+  </form>
+  {%endif%}

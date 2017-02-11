@@ -2,7 +2,7 @@
 
 <html>
   <head>
-    <title>Unit 2 Rot 13</title>
+    <title>Login</title>
     <style type="text/css">
       .label {text-align: right}
       .error {color: red}
@@ -11,7 +11,7 @@
   </head>
 
   <body>
-    <h2>Signin</h2>
+    <h2>Login</h2>
     <form method="post">
       <table>
         <tr>
@@ -20,9 +20,6 @@
           </td>
           <td>
             <input type="text" name="username" value="{{username}}">
-          </td>
-          <td class="error">
-            {{error_username}}
           </td>
         </tr>
 
@@ -33,17 +30,23 @@
           <td>
             <input type="password" name="password" value="">
           </td>
-          <td class="error">
-            {{error}}
-          </td>
         </tr>
-
-
       </table>
+
+      <div class="error">
+        {{error}}
+      </div>
 
       <input type="submit">
     </form>
+    <label>
+      <div   >
+      <h2> if you already don't have account click <a href="/signup">here</a>
+       </h2>
+    </div>
+
+    </label>
+
   </body>
 
 </html>
-

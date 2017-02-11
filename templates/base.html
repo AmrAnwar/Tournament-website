@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link type="text/css" rel="stylesheet" href="/static/main.css" />
+
+  <title>CSED19</title>
+</head>
+
+<body>
+  <a href="/home" class="main-title">
+   <p>
+        CSED19 Tournament website
+   </p>
+   <p >
+     By AmrAnwar
+   </p>
+  </a>
+
+  <div class="login-area">
+    {% if user %}
+      {{user.name}} (<a class="login-link" href="/logout">logout</a>)
+    {% else %}
+      <a class="login-link" href="/login">login</a>
+      |
+      <a class="login-link" href="/signup">signup</a>
+    {% endif %}
+  </div>
+
+  <div id="content">
+  {% block content %}
+  {% endblock %}
+  </div >
+  <hr>
+  <div class="f ">
+  see more projects:
+  <br>
+    <a href="https://github.com/AmrAnwar">Github</a> 
+    <br><br>
+    <a href="https://www.linkedin.com/in/amranwer/">Linkedin</a>
+  </div>
+
+
+</body>
+
+</html>
+

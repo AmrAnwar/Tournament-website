@@ -1,0 +1,41 @@
+<div>
+{% if members %}
+{%for d in members%}
+<li>{{d.name}}</li>
+{%endfor%}
+{% endif %}
+</div>
+
+<h3 style=" color: red ">registration has ended  </h3>
+<div class="TABLE">
+    <hr>
+    <h1>THE  TABLE </h1>
+</div>
+
+</form>
+<!-- The TaBle --> 
+<table summary="Tournament Bracket" class="bracket">
+<tr>
+    {%for i in range(1,r+1)%}
+    <th>Round{{i}}</th>
+
+    {%endfor%}
+    <th>The Winner</th>
+</tr>
+{%for i  in range(x)%}
+<tr>
+       <td><p>{{names[i]}} </p></td>
+      {%for j in range(1,r+1)%}
+          {%if (( i % (2**j)) == 0) %}
+              <td rowspan="{{2**j}}"><p>
+              {%if levels[i] >= j %}
+              {{names[i]}}
+              {%else%}
+              {%endif%}</p></td>
+          {%endif%}
+          {% else %}
+      {%endfor%}  
+</tr>
+{%endfor%}
+</table>
+{% endblock %}

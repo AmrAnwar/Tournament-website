@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <form method="post">
+  <div class="post">
+  <div class="post-heading">
+    <div class="post-title">
+      {{post.subject}}
+
+    </div>
+
+    <div class="post-date">
+      {{post.created.strftime("%b %d, %Y")}}
+    </div>
+  </div>
+
+  <div class="post-content">
+    {{post.content }}
+  </div>
+
+   <div class="post-number">
+    <div class="post-content">
+    we need {{post.number }} players
+  	</div>
+ </div>
+</div>
+
+<input type="submit" value="join" >
+{%if error%}
+<h3 style=" color: red ">{{error}} </h3>
+
+{%endif%}
+<div class="players">
+  <h1 >{{x}} Players Registed : </h1>
+</div>
+
+<div>
+{% if members %}
+{%for d in members%}
+<li>{{d.name}}</li>
+{%endfor%}
+{% endif %}
+</div>
+
+
+</form>
+<hr>
+<div class="TABLE">
+    
+    <p> <h1>THE  TABLE </h1></p>
+    <p class="post-content">will appear after join {{r}} players</p>
+</div>
+
+{% endblock %}
