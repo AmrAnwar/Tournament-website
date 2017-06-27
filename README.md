@@ -1,6 +1,6 @@
 # Tournament-website
 
-**it's simple project to make website which Create Tournaments tables to any account I'll upload here the template file only**
+**it's simple open-source python(webapp2) website to make Tournaments tables to any account I'll upload here the template file only**
 
 - this is the link for the website : http://toursdemo-00.appspot.com/
 * Tournament can have any (2^n) number of players
